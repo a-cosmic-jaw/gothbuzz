@@ -16,7 +16,7 @@ class ApiController {
     @Produces(MediaType.TEXT_HTML)
     @Get("lizard/wizard")
     fun getLizardWizard(request: HttpRequest<*>): HttpResponse<*> {
-        val body = "<html><head><title>api lizard</title><body>API wizard</body></html>"
+        val body = "<html><head><title>api lizard</title><body>API wizard - laggdax</body></html>"
         logger.info("Logger lizard!")
         return HttpResponse.ok(body).contentType(MediaType.TEXT_HTML)
     }
