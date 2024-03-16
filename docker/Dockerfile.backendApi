@@ -4,7 +4,7 @@ FROM eclipse-temurin:17-jre-focal
 WORKDIR /root
 
 COPY . .
-RUN ./gradlew :backendApi:shadowJar
+RUN ./gradlew :backendApi:shadowJar > /dev/null
 RUN mv backendApi/build/libs/backendApi-*-all.jar /root/server.jar
 RUN cp backendApi/src/main/resources/banner.txt /root
 
