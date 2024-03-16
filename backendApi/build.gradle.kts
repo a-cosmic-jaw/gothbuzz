@@ -10,7 +10,7 @@ plugins {
     //id("org.gradle.manifest")
 }
 
-val kotlinVersion=project.properties.get("kotlinVersion")
+val kotlinVersion by project.properties
 
 repositories {
     mavenCentral()
