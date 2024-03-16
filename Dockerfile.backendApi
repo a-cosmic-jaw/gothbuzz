@@ -3,6 +3,7 @@ FROM eclipse-temurin:17-jre-focal
 WORKDIR /root
 COPY . .
 RUN ./gradlew :backendApi:shadowJar
+CMD mv backendApi/build/libs/backendApi-*-all.jar backendApi/build/libs/backendApi-all.jar
 
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/root/backendApi/build/libs/backendApi-all.jar"]
