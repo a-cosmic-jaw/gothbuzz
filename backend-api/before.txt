@@ -1,0 +1,10 @@
+.//before.txt
+.//README.md
+.//build.gradle.kts
+.//micronaut-cli.yml
+.//src/test/kotlin/io/kotest/provided/ProjectConfig.kt
+.//src/test/kotlin/eu/symmetrysought/gothbuzz/BackendApiTest.kt
+.//src/main/resources/logback.xml
+.//src/main/resources/application.properties
+.//src/main/kotlin/eu/symmetrysought/gothbuzz/Application.kt
+.//src/main/kotlin/eu/symmetrysought/gothbuzz/ApiController.kt
