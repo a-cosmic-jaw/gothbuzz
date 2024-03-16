@@ -1,4 +1,3 @@
-#docker build --no-cache --build-arg PORT=8100 --progress=plain -f Dockerfile.backendApi .
 FROM eclipse-temurin:17-jre-focal
 
 CMD pwd
@@ -10,4 +9,4 @@ RUN ./gradlew :backendApi:shadowJar > /dev/null
 RUN mv backendApi/build/libs/backendApi-*-all.jar /root/server.jar
 RUN cp backendApi/src/main/resources/banner.txt /root
 
-ENTRYPOINT ./docker/entrypoint.sh
+ENTRYPOINT ./scripts/docker-entrypoint.sh
