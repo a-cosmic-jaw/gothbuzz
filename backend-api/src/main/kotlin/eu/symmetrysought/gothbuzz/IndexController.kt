@@ -10,13 +10,13 @@ import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
 @Controller("/")
-class ApiController {
+class IndexController {
     private val logger: Logger = LoggerFactory.getLogger(javaClass)
 
     @Produces(MediaType.TEXT_HTML)
-    @Get("lizard/wizard")
+    @Get
     fun getLizardWizard(request: HttpRequest<*>): HttpResponse<*> {
-        val body = "<html><head><title>api lizard</title><body>API wizard</body></html>"
+        val body = "<html><head><title>index lizard</title><body>Index wizard!</body></html>"
         return HttpResponse.ok(body).contentType(MediaType.TEXT_HTML)
     }
 }
