@@ -1,9 +1,16 @@
+#docker build --no-cache --build-arg PORT=8100 --progress=plain -f Dockerfile.backendApi .
 FROM eclipse-temurin:17-jre-focal
 
 WORKDIR /root
+ARG PORT
+
+RUN echo "PORT=$PORT"
+ENV MICRONAUT_SERVER_PORT $PORT
+RUN echo "MICRONAUT_SERVER_PORT=$MICRONAUT_SERVER_PORT"
+
 COPY . .
 RUN ./gradlew :backendApi:shadowJar
-CMD mv backendApi/build/libs/backendApi-*-all.jar backendApi/build/libs/backendApi-all.jar
+RUN mv backendApi/build/libs/backendApi-*-all.jar backendApi/build/libs/backendApi-all.jar
 
-EXPOSE 8080
+EXPOSE $MICRONAUT_SERVER_PORT
 ENTRYPOINT ["java", "-jar", "/root/backendApi/build/libs/backendApi-all.jar"]
