@@ -1,4 +1,4 @@
-package actiwerks.kmmkspexample
+package eu.symmetrysought.gothbuzz
 
 interface Platform {
     val name: String

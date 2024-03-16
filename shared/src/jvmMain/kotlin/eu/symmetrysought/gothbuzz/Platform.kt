@@ -1,7 +1,7 @@
-package actiwerks.kmmkspexample
+package eu.symmetrysought.gothbuzz
 
-interface Platform {
-    val name: String
+class JvmPlatform : Platform {
+    override val name: String = "JVM 17"
 }
 
-expect fun getPlatform(): Platform
+actual fun getPlatform(): Platform = JvmPlatform()

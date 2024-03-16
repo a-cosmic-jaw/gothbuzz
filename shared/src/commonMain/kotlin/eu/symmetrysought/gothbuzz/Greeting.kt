@@ -7,6 +7,6 @@ class Greeting {
 
     fun greet(): String {
         val generatedGreeting = ExampleGenerated.generatedMessage()
-        return "Hello, ${platform.name}! Big things follow: $generatedGreeting"
+        return "Hello, ${platform.name}! Big common things follow: $generatedGreeting"
     }
 }

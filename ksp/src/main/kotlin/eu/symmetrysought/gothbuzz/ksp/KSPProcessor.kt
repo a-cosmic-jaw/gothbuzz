@@ -25,7 +25,7 @@ class KSPProcessor constructor(private val environment: SymbolProcessorEnvironme
 
         if (!generated) {
 
-            val packageName = "actiwerks.ksp"
+            val packageName = "eu.symmetrysought.gothbuzz.ksp"
             val file: OutputStream = codeGenerator.createNewFile(
                 dependencies = Dependencies(false, *resolver.getAllFiles().toList().toTypedArray()),
                 packageName = packageName,
