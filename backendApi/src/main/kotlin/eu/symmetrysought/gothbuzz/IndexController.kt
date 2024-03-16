@@ -17,6 +17,7 @@ class IndexController {
     @Get
     fun getLizardWizard(request: HttpRequest<*>): HttpResponse<*> {
         val body = "<html><head><title>index lizard</title><body>Index wizard! env</body></html>"
+        logger.info("Index lizard logz!")
         return HttpResponse.ok(body).contentType(MediaType.TEXT_HTML)
     }
 }

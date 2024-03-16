@@ -9,5 +9,5 @@ pluginManagement {
 
 rootProject.name="gothbuzz"
 
-include("backend-api")
+include("backendApi")
 

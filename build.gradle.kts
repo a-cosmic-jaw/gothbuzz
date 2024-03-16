@@ -8,7 +8,7 @@ plugins {
     id("io.micronaut.aot") version "4.3.4" apply false
 }
 
-version = "0.1"
+version = "0.0.1"
 group = "eu.symmetrysought.gothbuzz"
 
 
