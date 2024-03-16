@@ -2,8 +2,7 @@ FROM eclipse-temurin:17-jre-focal
 RUN mkdir -p /home/app
 WORKDIR /home/app
 COPY . .
-RUN ls -l
-RUN ls -l gradle/wrapper
+RUN env
 RUN ./gradlew :backend-api:shadowJar
 
 EXPOSE 8080
