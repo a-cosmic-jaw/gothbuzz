@@ -8,7 +8,7 @@ val kotlinVersion = extra["kotlin.version.$kotlinGeneration"] as String
 
 
 dependencies {
-    implementation(project(":sharedBase"))
+
 }
 
 java {
