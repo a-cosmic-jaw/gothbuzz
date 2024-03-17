@@ -13,8 +13,8 @@ kotlin {
             dependencies {
                 implementation("com.google.devtools.ksp:symbol-processing-api:$kspVersion")
             }
-            kotlin.srcDir("src/main/kotlin")
-            resources.srcDir("src/main/resources")
+            kotlin.srcDir("src/jvmMain/kotlin")
+            resources.srcDir("src/jvmMain/resources")
         }
     }
 }
