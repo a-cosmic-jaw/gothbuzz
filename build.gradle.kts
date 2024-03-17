@@ -1,3 +1,4 @@
+import org.jetbrains.compose.ComposeExtension
 
 buildscript {
     dependencies {
@@ -8,6 +9,8 @@ buildscript {
 plugins {
     id("idea")
     id("org.jetbrains.kotlin.multiplatform") apply false
+    id("org.jetbrains.kotlin.jvm") apply false
+    id("org.jetbrains.kotlin.android") apply false
     id("org.jetbrains.kotlin.plugin.allopen") apply false
     id("org.jetbrains.kotlin.plugin.serialization") apply false
     id("com.google.devtools.ksp") apply false
@@ -15,6 +18,7 @@ plugins {
     id("io.micronaut.application") apply false
     id("io.micronaut.aot") apply false
     id("com.android.library") apply false
+    id("org.jetbrains.compose") apply false
 }
 
 allprojects {
@@ -48,6 +52,15 @@ subprojects {
 //            }
 //        }
 //    }
+    afterEvaluate {
+        extensions.findByType(ComposeExtension::class.java)?.apply {
+            val kotlinGeneration = project.property("kotlin.generation")
+            val composeCompilerVersion = project.property("compose.compiler.version.$kotlinGeneration") as String
+            kotlinCompilerPlugin.set(composeCompilerVersion)
+            val kotlinVersion = project.property("kotlin.version.$kotlinGeneration") as String
+            kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=$kotlinVersion")
+        }
+    }
 }
 
 

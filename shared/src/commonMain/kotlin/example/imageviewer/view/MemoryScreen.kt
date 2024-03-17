@@ -29,10 +29,11 @@ import example.imageviewer.LocalImageProvider
 import example.imageviewer.Localization
 import example.imageviewer.model.*
 import example.imageviewer.style.ImageviewerColors
-import imageviewer.shared.generated.resources.Res
-import imageviewer.shared.generated.resources.arrowleft
-import imageviewer.shared.generated.resources.magic
-import imageviewer.shared.generated.resources.trash
+//import imageviewer.shared.generated.resources.Res
+//import imageviewer.shared.generated.resources.arrowleft
+//import imageviewer.shared.generated.resources.magic
+//import imageviewer.shared.generated.resources.trash
+import eu.symmetrysought.gothbuzz.shared.generated.resources.*
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 

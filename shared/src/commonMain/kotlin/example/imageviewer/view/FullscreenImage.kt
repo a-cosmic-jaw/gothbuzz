@@ -25,11 +25,12 @@ import example.imageviewer.core.BitmapFilter
 import example.imageviewer.core.FilterType
 import example.imageviewer.model.*
 import example.imageviewer.style.*
-import imageviewer.shared.generated.resources.*
-import imageviewer.shared.generated.resources.Res
-import imageviewer.shared.generated.resources.arrowleft
-import imageviewer.shared.generated.resources.grayscale_off
-import imageviewer.shared.generated.resources.grayscale_on
+//import imageviewer.shared.generated.resources.*
+//import imageviewer.shared.generated.resources.Res
+//import imageviewer.shared.generated.resources.arrowleft
+//import imageviewer.shared.generated.resources.grayscale_off
+//import imageviewer.shared.generated.resources.grayscale_on
+import eu.symmetrysought.gothbuzz.shared.generated.resources.*
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 

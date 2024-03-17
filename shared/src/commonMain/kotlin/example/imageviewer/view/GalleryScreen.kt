@@ -32,10 +32,11 @@ import example.imageviewer.*
 import example.imageviewer.icon.IconVisibility
 import example.imageviewer.model.*
 import example.imageviewer.style.ImageviewerColors
-import imageviewer.shared.generated.resources.Res
-import imageviewer.shared.generated.resources.eye
-import imageviewer.shared.generated.resources.list_view
-import imageviewer.shared.generated.resources.plus
+//import imageviewer.shared.generated.resources.Res
+//import imageviewer.shared.generated.resources.eye
+//import imageviewer.shared.generated.resources.list_view
+//import imageviewer.shared.generated.resources.plus
+import eu.symmetrysought.gothbuzz.shared.generated.resources.*
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 

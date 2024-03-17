@@ -9,8 +9,8 @@ import example.imageviewer.core.FilterType
 import example.imageviewer.model.*
 import kotlinx.coroutines.CoroutineScope
 import org.jetbrains.compose.resources.ExperimentalResourceApi
-import imageviewer.shared.generated.resources.*
-
+//import imageviewer.shared.generated.resources.*
+import eu.symmetrysought.gothbuzz.shared.generated.resources.*
 //import kotlinx.serialization.json.Json
 
 interface Dependencies {

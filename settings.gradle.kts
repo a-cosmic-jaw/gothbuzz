@@ -1,14 +1,21 @@
 
 pluginManagement {
-    val kotlinVersion: String by settings
     val kspVersion: String by settings
     val shadowVersion: String by settings
     val micronautVersion: String by settings
     val androidLibraryVersion: String by settings
+    val kotlinGeneration = extra["kotlin.generation"] as String
+    val kotlinVersion = extra["kotlin.version.$kotlinGeneration"] as String
+    val agpVersion = extra["agp.version"] as String
+    val composeVersion = extra["compose.wasm.version.$kotlinGeneration"] as String
 
     plugins {
         id("idea")
         id("kotlin")
+        kotlin("jvm").version(kotlinVersion)
+        kotlin("multiplatform").version(kotlinVersion)
+
+        kotlin("android").version(kotlinVersion)
         id("org.jetbrains.kotlin.multiplatform") version kotlinVersion
         id("org.jetbrains.kotlin.plugin.allopen") version kotlinVersion
         id("org.jetbrains.kotlin.plugin.serialization") version kotlinVersion
@@ -16,7 +23,10 @@ pluginManagement {
         id("com.github.johnrengelman.shadow") version shadowVersion
         id("io.micronaut.application") version micronautVersion
         id("io.micronaut.aot") version micronautVersion
-        id("com.android.library") version androidLibraryVersion
+        id("com.android.base").version(agpVersion)
+        id("com.android.application").version(agpVersion)
+        id("com.android.library").version(agpVersion)
+        id("org.jetbrains.compose").version(composeVersion)
     }
 
     repositories {
@@ -28,10 +38,10 @@ pluginManagement {
 
 rootProject.name="gothbuzz"
 
-include(":ksp")
 include(":shared")
 include(":backendApi")
+include(":androidApp")
 
-project(":ksp").name = "ksp"
 project(":shared").name = "shared"
 project(":backendApi").name = "backendApi"
+project(":androidApp").name = "androidApp"

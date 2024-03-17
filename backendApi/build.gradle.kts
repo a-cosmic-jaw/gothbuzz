@@ -11,14 +11,15 @@ plugins {
     //id("org.gradle.manifest")
 }
 
-val kotlinVersion by project.properties
+val kotlinGeneration = extra["kotlin.generation"] as String
+val kotlinVersion = extra["kotlin.version.$kotlinGeneration"] as String
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation(project(":shared"))
+    //implementation(project(":sharedBackend"))
 
     ksp("io.micronaut:micronaut-http-validation")
     ksp("io.micronaut.serde:micronaut-serde-processor")
