@@ -38,10 +38,12 @@ pluginManagement {
 
 rootProject.name="gothbuzz"
 
+include(":shared")
 include(":sharedCompose")
 include(":backendApi")
 include(":androidApp")
 
+project(":shared").name = "shared"
 project(":sharedCompose").name = "sharedCompose"
 project(":backendApi").name = "backendApi"
 project(":androidApp").name = "androidApp"

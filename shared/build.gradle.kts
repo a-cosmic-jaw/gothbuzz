@@ -3,19 +3,15 @@
 plugins {
     id("idea")
     id("org.jetbrains.kotlin.multiplatform")
-    id("com.android.library")
-    id("org.jetbrains.compose")
     kotlin("plugin.serialization")
+    id("com.android.library")
 }
 
-val ktorVersion = "2.2.1"//: String by project
 
 kotlin {
-    //jvm("desktop")
+    jvm()
     // https://stackoverflow.com/questions/76108428/how-do-i-fix-namespace-not-specified-error-in-android-studio
     androidTarget {
-        //namespace("eu.symmetrysought.gothbuzz")
-
         compilations.all {
             kotlinOptions {
                 jvmTarget = "17"
@@ -25,39 +21,20 @@ kotlin {
 
     sourceSets {
         val commonMain by getting {
-            dependencies {
-                implementation(project(":shared"))
 
-                implementation(compose.runtime)
-                implementation(compose.foundation)
-                implementation(compose.material)
-                @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
-                implementation(compose.material3)
-                @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
-                implementation(compose.components.resources)
-//                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
-            }
         }
         val commonTest by getting {
             dependencies {
-                implementation(project(":shared"))
                 implementation(kotlin("test"))
             }
         }
         val androidMain by getting {
             dependencies {
-                implementation(project(":shared"))
 
-                api("androidx.activity:activity-compose:1.6.1")
-                api("androidx.appcompat:appcompat:1.6.1")
-                api("androidx.core:core-ktx:1.9.0")
-                implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
             }
         }
-        val androidUnitTest by getting
-            dependencies {
-                implementation(project(":shared"))
-            }
+        val androidUnitTest by getting //TODO rename
+
     }
 }
 
