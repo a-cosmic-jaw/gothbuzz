@@ -36,7 +36,7 @@ import example.imageviewer.style.ImageviewerColors
 //import imageviewer.shared.generated.resources.eye
 //import imageviewer.shared.generated.resources.list_view
 //import imageviewer.shared.generated.resources.plus
-import eu.symmetrysought.gothbuzz.shared.generated.resources.*
+import eu.symmetrysought.gothbuzz.sharedcompose.generated.resources.*
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 

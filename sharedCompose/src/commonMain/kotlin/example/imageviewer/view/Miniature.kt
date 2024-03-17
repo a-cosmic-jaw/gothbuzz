@@ -29,8 +29,8 @@ import example.imageviewer.model.Picture
 import example.imageviewer.model.name
 //import imageviewer.shared.generated.resources.Res
 //import imageviewer.shared.generated.resources.dots
-import eu.symmetrysought.gothbuzz.shared.generated.resources.Res
-import eu.symmetrysought.gothbuzz.shared.generated.resources.dots
+import eu.symmetrysought.gothbuzz.sharedcompose.generated.resources.Res
+import eu.symmetrysought.gothbuzz.sharedcompose.generated.resources.dots
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 

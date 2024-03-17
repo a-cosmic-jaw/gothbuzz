@@ -30,7 +30,7 @@ import example.imageviewer.style.*
 //import imageviewer.shared.generated.resources.arrowleft
 //import imageviewer.shared.generated.resources.grayscale_off
 //import imageviewer.shared.generated.resources.grayscale_on
-import eu.symmetrysought.gothbuzz.shared.generated.resources.*
+import eu.symmetrysought.gothbuzz.sharedcompose.generated.resources.*
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 

@@ -7,7 +7,7 @@ import androidx.compose.ui.layout.ContentScale
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 //import imageviewer.shared.generated.resources.*
-import eu.symmetrysought.gothbuzz.shared.generated.resources.*
+import eu.symmetrysought.gothbuzz.sharedcompose.generated.resources.*
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable

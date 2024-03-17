@@ -33,7 +33,7 @@ import example.imageviewer.style.ImageviewerColors
 //import imageviewer.shared.generated.resources.arrowleft
 //import imageviewer.shared.generated.resources.magic
 //import imageviewer.shared.generated.resources.trash
-import eu.symmetrysought.gothbuzz.shared.generated.resources.*
+import eu.symmetrysought.gothbuzz.sharedcompose.generated.resources.*
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 
