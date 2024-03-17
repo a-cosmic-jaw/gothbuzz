@@ -6,6 +6,7 @@ target/
 out/
 .micronaut/
 .idea
+kotlin-js-store
 *.iml
 *.ipr
 *.iws
@@ -14,3 +15,7 @@ out/
 .classpath
 .factorypath
 local.properties
+
+# Kobweb ignores
+.kobweb/server
+!.kobweb/conf.yaml

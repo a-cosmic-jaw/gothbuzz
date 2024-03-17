@@ -8,14 +8,14 @@ pluginManagement {
     val kotlinVersion = extra["kotlin.version.$kotlinGeneration"] as String
     val agpVersion = extra["agp.version"] as String
     val composeVersion = extra["compose.wasm.version.$kotlinGeneration"] as String
+    val kobwebVersion: String by settings
 
     plugins {
         id("idea")
-        id("kotlin")
-        kotlin("jvm").version(kotlinVersion)
-        kotlin("multiplatform").version(kotlinVersion)
+        id("kotlin") version kotlinVersion
 
-        kotlin("android").version(kotlinVersion)
+        id("org.jetbrains.kotlin.jvm") version kotlinVersion
+        id("org.jetbrains.kotlin.android") version kotlinVersion
         id("org.jetbrains.kotlin.multiplatform") version kotlinVersion
         id("org.jetbrains.kotlin.plugin.allopen") version kotlinVersion
         id("org.jetbrains.kotlin.plugin.serialization") version kotlinVersion
@@ -23,16 +23,22 @@ pluginManagement {
         id("com.github.johnrengelman.shadow") version shadowVersion
         id("io.micronaut.application") version micronautVersion
         id("io.micronaut.aot") version micronautVersion
-        id("com.android.base").version(agpVersion)
-        id("com.android.application").version(agpVersion)
-        id("com.android.library").version(agpVersion)
-        id("org.jetbrains.compose").version(composeVersion)
+        id("com.android.base") version agpVersion
+        id("com.android.application") version agpVersion
+        id("com.android.library") version agpVersion
+        id("org.jetbrains.compose") version composeVersion
+        id("com.varabyte.kobweb.application") version kobwebVersion
+        id("com.varabyte.kobwebx.markdown") version kobwebVersion
+        //id("com.varabyte.kobweb.library") version kobwebVersion
+        //id("com.varabyte.kobweb.worker") version kobwebVersion
     }
 
     repositories {
         gradlePluginPortal()
         google()
         mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+        maven("https://us-central1-maven.pkg.dev/varabyte-repos/public")
     }
 }
 
@@ -43,9 +49,11 @@ include(":sharedCompose")
 include(":sharedBackend")
 include(":backendApi")
 include(":androidApp")
+include(":frontendMain")
 
 project(":sharedBase").name = "sharedBase"
 project(":sharedCompose").name = "sharedCompose"
 project(":sharedBackend").name = "sharedBackend"
 project(":backendApi").name = "backendApi"
 project(":androidApp").name = "androidApp"
+project(":frontendMain").name = "frontendMain"

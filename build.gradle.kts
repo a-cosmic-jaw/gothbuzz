@@ -19,6 +19,10 @@ plugins {
     id("io.micronaut.aot") apply false
     id("com.android.library") apply false
     id("org.jetbrains.compose") apply false
+    id("com.varabyte.kobweb.application") apply false
+    id("com.varabyte.kobwebx.markdown") apply false
+    //id("com.varabyte.kobweb.library") apply false
+    //id("com.varabyte.kobweb.worker") apply false
 }
 
 allprojects {
