@@ -16,8 +16,15 @@ class IndexController {
     @Produces(MediaType.TEXT_HTML)
     @Get
     fun getLizardWizard(request: HttpRequest<*>): HttpResponse<*> {
-        val body = "<html><head><title>index lizard</title><body>Index wizard! laggdax</body></html>"
+
         logger.info("Index lizard logz!")
+
+        val sharedBackend = SharedBackend().greeting + " oxå kaka!!"
+
+        logger.info("sharedBackend=$sharedBackend")
+
+        val body = "<html><head><title>index lizard</title><body><h1>$sharedBackend</h1><b>Index wizard!</b><br /></body></html>"
+
         return HttpResponse.ok(body).contentType(MediaType.TEXT_HTML)
     }
 }

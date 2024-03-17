@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-    //implementation(project(":sharedBackend"))
+    implementation(project(":sharedBackend"))
 
     ksp("io.micronaut:micronaut-http-validation")
     ksp("io.micronaut.serde:micronaut-serde-processor")

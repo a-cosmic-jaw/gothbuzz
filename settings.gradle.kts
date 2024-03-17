@@ -40,10 +40,12 @@ rootProject.name="gothbuzz"
 
 include(":sharedBase")
 include(":sharedCompose")
+include(":sharedBackend")
 include(":backendApi")
 include(":androidApp")
 
 project(":sharedBase").name = "sharedBase"
 project(":sharedCompose").name = "sharedCompose"
+project(":sharedBackend").name = "sharedBackend"
 project(":backendApi").name = "backendApi"
 project(":androidApp").name = "androidApp"
