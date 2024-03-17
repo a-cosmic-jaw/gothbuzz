@@ -26,7 +26,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(project(":shared"))
+                implementation(project(":sharedBase"))
 
                 implementation(compose.runtime)
                 implementation(compose.foundation)
@@ -40,13 +40,13 @@ kotlin {
         }
         val commonTest by getting {
             dependencies {
-                implementation(project(":shared"))
+                implementation(project(":sharedBase"))
                 implementation(kotlin("test"))
             }
         }
         val androidMain by getting {
             dependencies {
-                implementation(project(":shared"))
+                implementation(project(":sharedBase"))
 
                 api("androidx.activity:activity-compose:1.6.1")
                 api("androidx.appcompat:appcompat:1.6.1")
@@ -56,7 +56,7 @@ kotlin {
         }
         val androidUnitTest by getting
             dependencies {
-                implementation(project(":shared"))
+                implementation(project(":sharedBase"))
             }
     }
 }
