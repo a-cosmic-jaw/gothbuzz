@@ -14,9 +14,6 @@ plugins {
 val kotlinGeneration = extra["kotlin.generation"] as String
 val kotlinVersion = extra["kotlin.version.$kotlinGeneration"] as String
 
-repositories {
-    mavenCentral()
-}
 
 dependencies {
     implementation(project(":sharedBackend"))
